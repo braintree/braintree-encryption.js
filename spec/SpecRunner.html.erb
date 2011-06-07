@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Jasmine Test Runner</title>
+  <link rel="stylesheet" type="text/css" href="infrastructure/jasmine-standalone-1.0.0/lib/jasmine-1.0.0/jasmine.css">
+  <script type="text/javascript" src="infrastructure/jasmine-standalone-1.0.0/lib/jasmine-1.0.0/jasmine.js"></script>
+  <script type="text/javascript" src="infrastructure/jasmine-standalone-1.0.0/lib/jasmine-1.0.0/jasmine-html.js"></script>
+
+  <!-- include source files here... -->
+  <script type="text/javascript" src="../target/braintree-1.1.0.min.js"></script>
+
+  <!-- include spec files here... -->
+  <% spec_files.each do |source_file| %>
+    <script type="text/javascript" src="<%= source_file %>"></script>
+  <% end %>
+</head>
+<body>
+
+<script type="text/javascript">
+  jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+  jasmine.getEnv().execute();
+</script>
+
+</body>
+</html>
