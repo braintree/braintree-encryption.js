@@ -20,7 +20,7 @@ Here's a quick example.  First, include this library using a script tag:
 </head>
 ```
 
-You can download the javascript file from the [github downloads page](https://github.com/braintree/braintree_client_side_encryption/downloads).
+You can download the JavaScript file from the [github downloads page](https://github.com/braintree/braintree_client_side_encryption/downloads).
 
 Then, configure the library to use your public key.
 
@@ -38,7 +38,7 @@ Because we are using asymmetric encryption, you will be unable to decrypt the da
 
 ## Encrypting Form Values
 
-The normal use case for this library is to encrypt a credit number and CVV code before a form is submitted to your servers.  A simple example of this using [jQuery](http://jquery.com/) might look something like this:
+The normal use case for this library is to encrypt a credit card number and CVV code before a form is submitted to your servers.  A simple example of this using [jQuery](http://jquery.com/) might look something like this:
 
 ```javascript
 $('#transaction_form').submit(function () {
@@ -56,7 +56,7 @@ The simple example provided above will result in the encrypted values being mome
 
 ### Maintain Security for Users without JavaScript
 
-In a naive implementation, users without JavaScript could end up submitting their credit cards to your server in the clear.  You'll need to take steps to ensure that a user can never enter their credit card without it being securely handled.  The simplest way to achieve is to wrap your payment form in a `noscript` tag.
+In a naive implementation, users without JavaScript enabled could end up submitting their credit cards to your server in the clear.  You'll need to take steps to ensure that a user can never enter their credit card without it being securely handled.  One way to achieve this is to have your form initially hidden and/or disabled, and use JavaScript to display and/or enable it. That way, users without JavaScript enabled will never see the form. You may want to add a noscript tag to inform your users that javascript is required.
 
 ## Retrieving your Encryption Key
 
