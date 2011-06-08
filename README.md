@@ -16,9 +16,12 @@ Here's a quick example.  First, include this library using a script tag:
 
 ```html
 <head>
-  <script src="/javascripts/braintree-0.1.0.min.js" type="text/javascript"></script>
+  <script src="/javascripts/braintree-1.1.0.min.js" type="text/javascript"></script>
 </head>
 ```
+
+You can download the javascript file from the [github downloads page](https://github.com/braintree/braintree_client_side_encryption/downloads).
+
 Then, configure the library to use your public key.
 
 ```javascript
