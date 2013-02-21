@@ -1,1 +1,1 @@
-Braintree = (function () {
+(function () {
