@@ -1,2 +1,5 @@
 /target
 /spec/SpecRunner.html
+/lib/encryptForm.js
+/spec/braintree_form_spec.js
+

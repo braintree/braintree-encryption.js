@@ -1,14 +1,16 @@
 /*!
  * Braintree End-to-End Encryption Library
  * http://www.braintreepayments.com
+ * Copyright (c) 2009-2013 Braintree Payment Solutions
  *
- * Licensed under the MIT or GPL Version 2 licenses.
+ * JSBN
+ * Copyright (c) 2005  Tom Wu
  *
- * Includes pidCrypt
- * Copyright (c) 2009 pidder <www.pidder.com>
- * Released under the GPL License.
+ * Both Licensed under the MIT License.
+ * http://opensource.org/licenses/MIT
  *
- * Includes SJCL
- * Copyright 2009-2010 Emily Stark, Mike Hamburg, Dan Boneh, Stanford University.
- * Released under the GPL Version 2 License.
+ * ASN.1 JavaScript decoder
+ * Copyright (c) 2008-2009 Lapo Luchini <lapo@lapo.it>
+ * Licensed under the ISC License.
+ * http://opensource.org/licenses/ISC
  */

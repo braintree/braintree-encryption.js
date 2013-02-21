@@ -6,9 +6,16 @@
   <link rel="stylesheet" type="text/css" href="infrastructure/jasmine-standalone-1.0.0/lib/jasmine-1.0.0/jasmine.css">
   <script type="text/javascript" src="infrastructure/jasmine-standalone-1.0.0/lib/jasmine-1.0.0/jasmine.js"></script>
   <script type="text/javascript" src="infrastructure/jasmine-standalone-1.0.0/lib/jasmine-1.0.0/jasmine-html.js"></script>
+  <script type="text/javascript" src="infrastructure/jasmine-jquery-1.3.1.js"></script>
+  <script type="text/javascript" src="infrastructure/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="../lib/base64.js"></script>
+  <script type="text/javascript" src="../lib/jsbn.js"></script>
+  <script type="text/javascript" src="../lib/rsa.js"></script>
+  <script type="text/javascript" src="infrastructure/jsbn2.js"></script>
+  <script type="text/javascript" src="infrastructure/rsa2.js"></script>
 
   <!-- include source files here... -->
-  <script type="text/javascript" src="../target/braintree-1.1.1.min.js"></script>
+  <script type="text/javascript" src="<%= "../target/braintree-" + BRAINTREE_VERSION + ".js" %>"></script>
 
   <!-- include spec files here... -->
   <% spec_files.each do |source_file| %>
