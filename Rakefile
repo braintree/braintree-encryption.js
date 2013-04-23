@@ -127,6 +127,36 @@ namespace :build do
     `cat #{files.join(' ')} >> #{TARGET_DIR}/braintree-#{BRAINTREE_VERSION}.js`
   end
 
+  desc "compile braintree.js"
+  task :bundlenode => ["build:clean"] do
+    files = %W[
+      #{BUILD_DIR}/minified_header.js
+      #{BUILD_DIR}/bundle_header_node.js
+
+      #{LIB_DIR}/asn1.js
+      #{JSBN_DIR}/base64.js
+      #{JSBN_DIR}/jsbn.js
+      #{JSBN_DIR}/rsa.js
+
+      #{SJCL_DIR}/sjcl.js
+      #{SJCL_DIR}/aes.js
+      #{SJCL_DIR}/bitArray.js
+      #{SJCL_DIR}/codecHex.js
+      #{SJCL_DIR}/codecString.js
+      #{SJCL_DIR}/codecBase64.js
+      #{SJCL_DIR}/cbc.js
+      #{SJCL_DIR}/hmac.js
+      #{SJCL_DIR}/sha256.js
+      #{SJCL_DIR}/random.js
+
+      #{LIB_DIR}/braintree.js
+      #{LIB_DIR}/encryptForm.js
+
+      #{BUILD_DIR}/bundle_footer_node.js
+    ]
+    `cat #{files.join(' ')} >> #{TARGET_DIR}/braintree-#{BRAINTREE_VERSION}.js`
+  end
+
   desc "minify braintree.js"
   task :minify => ["build:bundle"] do
     `cat #{BUILD_DIR}/minified_header.js > #{TARGET_DIR}/braintree-#{BRAINTREE_VERSION}.min.js`
@@ -136,3 +166,6 @@ end
 
 desc "build braintree.js"
 task :build  => ["build:clean", "build:compile_coffee", "build:bundle", "build:minify"]
+
+desc "build braintree.js for node"
+task :buildnode => ["build:clean", "build:compile_coffee", "build:bundlenode", "build:minify"]
