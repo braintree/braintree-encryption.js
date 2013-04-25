@@ -1,3 +1,10 @@
+== 1.3.0
+
+* Add AMD Support
+* Improved error messages when wrong key is used
+* Update encryptForm to take a jQuery object or element id
+* Fix calling form encryption helpers with DOM elements in IE < 10
+
 == 1.2.0
 
 * Add form encryption helpers

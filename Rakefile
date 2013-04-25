@@ -26,19 +26,13 @@ namespace :test do
     end
   end
 
-  desc "compile specs"
-  task :compile_specs do
-    `coffee --compile #{SPEC_DIR}/*.coffee`
-  end
-
-  desc "clean up compiled specs"
+  desc "clean up old SpecRunner.html"
   task :clean do
     rm_rf "#{File.dirname(__FILE__)}/spec/SpecRunner.html"
-    rm_rf "#{File.dirname(__FILE__)}/spec/braintree_form_spec.js"
   end
 
   desc "prepare to run specs"
-  task :prepare => ["test:clean", "compile_specs", "build"] do
+  task :prepare => ["test:clean", "build"] do
     template = ERB.new(File.read("#{SPEC_DIR}/SpecRunner.html.erb"))
     spec_files = Dir.glob("#{SPEC_DIR}/*.js")
 
@@ -92,11 +86,6 @@ namespace :build do
     mkdir TARGET_DIR
   end
 
-  desc "compile coffeescript"
-  task :compile_coffee do
-    `coffee --compile #{LIB_DIR}/*.coffee`
-  end
-
   desc "compile braintree.js"
   task :bundle => ["build:clean"] do
     files = %W[
@@ -120,7 +109,6 @@ namespace :build do
       #{SJCL_DIR}/random.js
 
       #{LIB_DIR}/braintree.js
-      #{LIB_DIR}/encryptForm.js
 
       #{BUILD_DIR}/bundle_footer.js
     ]
@@ -135,4 +123,4 @@ namespace :build do
 end
 
 desc "build braintree.js"
-task :build  => ["build:clean", "build:compile_coffee", "build:bundle", "build:minify"]
+task :build  => ["build:clean", "build:bundle", "build:minify"]

@@ -1,6 +1,6 @@
 /*!
  * Braintree End-to-End Encryption Library
- * http://www.braintreepayments.com
+ * https://www.braintreepayments.com
  * Copyright (c) 2009-2013 Braintree Payment Solutions
  *
  * JSBN
