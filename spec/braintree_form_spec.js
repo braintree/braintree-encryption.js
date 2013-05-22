@@ -51,6 +51,14 @@ describe("Braintree#form", function() {
       this.braintree.encryptForm('braintree_form');
       expect($('input[name="card-holder-first-name"]')).toHaveValue("bob");
     });
+
+    it("removes existing hidden inputs previously injected", function() {
+      this.braintree.encryptForm('braintree_form');
+      this.braintree.encryptForm('braintree_form');
+      expect($('input[type="hidden"][name="credit-card-cvv"]').length).toBe(1);
+      expect($('input[type="hidden"][name="credit-card-expiration-date"]').length).toBe(1);
+      expect($('input[type="hidden"][name="credit-card-number"]').length).toBe(1);
+    });
   });
 
   describe("onSubmitEncryptForm", function() {

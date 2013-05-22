@@ -1,3 +1,8 @@
+== 1.3.1
+
+* Refactor for consistency / readability
+* Don't add hidden form elements multiple times if encryptForm is called more than once
+
 == 1.3.0
 
 * Add AMD Support

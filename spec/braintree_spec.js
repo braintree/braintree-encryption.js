@@ -10,6 +10,11 @@ describe("Braintree", function () {
     expect(braintree.publicKey).toMatch("a public key");
   });
 
+  it("can be instantiated directly", function () {
+    var braintree = new Braintree.EncryptionClient("a public key");
+    expect(braintree.publicKey).toMatch("a public key");
+  });
+
   it("encrypts with a known AES key", function() {
     var braintree = Braintree.create(publicKey);
     var key = Braintree.generateAesKey();

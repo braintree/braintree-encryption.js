@@ -13,7 +13,7 @@ SPEC_RUNNER = File.join(SPEC_DIR, "SpecRunner.html")
 JSBN_DIR = File.join(LIB_DIR, "jsbn")
 SJCL_DIR = File.join(LIB_DIR, "sjcl/core")
 
-BRAINTREE_VERSION = File.read("#{LIB_DIR}/braintree.js")[/version: '([0-9.]+)'/, 1]
+BRAINTREE_VERSION = File.read("#{LIB_DIR}/braintree.js")[/version: \"([0-9.]+)\"/, 1]
 
 task :default => "test:run_default"
 
