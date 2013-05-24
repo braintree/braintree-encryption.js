@@ -9,6 +9,7 @@ describe("Braintree#form", function() {
                 "<input type='text' data-encrypted-name='credit-card-cvv' value='cvv' />" +
                 "<input type='text' name='card-holder-first-name' value='bob' />" +
                 "<input name='expiration-month' value ='May'/>" +
+                "<select data-encrypted-name='expiration-year'><option value='2013'>2013</option></select>" +
                 "<div id ='foo'>" +
                 "  <input data-encrypted-name ='credit-card-expiration-date' class='encrypted' value ='May'/>" +
                 "</div>" +
@@ -45,6 +46,11 @@ describe("Braintree#form", function() {
     it("encrypts nested input fields", function() {
       this.braintree.encryptForm('braintree_form');
       expect($('input[name="credit-card-expiration-date"]')).toHaveValue('encrypted May');
+    });
+
+    it("encrypts <select> input fields", function() {
+      this.braintree.encryptForm('braintree_form');
+      expect($('input[name="expiration-year"]')).toHaveValue('encrypted 2013');
     });
 
     it("does not encrypt fields without encrypted class", function() {

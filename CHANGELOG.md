@@ -1,3 +1,7 @@
+== 1.3.2
+
+Fix problem with select elements introduced in 1.3.1
+
 == 1.3.1
 
 * Refactor for consistency / readability
