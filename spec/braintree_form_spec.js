@@ -65,6 +65,12 @@ describe("Braintree#form", function() {
       expect($('input[type="hidden"][name="credit-card-expiration-date"]').length).toBe(1);
       expect($('input[type="hidden"][name="credit-card-number"]').length).toBe(1);
     });
+
+    it("shouldn't throw DOM exceptions when encrypting multiple times", function() {
+      this.braintree.encryptForm('braintree_form');
+      this.braintree.encryptForm('braintree_form');
+      this.braintree.encryptForm('braintree_form');
+    });
   });
 
   describe("onSubmitEncryptForm", function() {

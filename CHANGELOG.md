@@ -1,3 +1,7 @@
+== 1.3.3
+
+Fix encryptForm so it can be called any number of times, as before 1.3.1
+
 == 1.3.2
 
 Fix problem with select elements introduced in 1.3.1
