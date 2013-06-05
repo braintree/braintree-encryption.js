@@ -1,10 +1,14 @@
+== 1.3.4
+
+* Fix issue in IE 8 and below or IE 9 in quirksmode where comment nodes were incorrectly being handled
+
 == 1.3.3
 
-Fix encryptForm so it can be called any number of times, as before 1.3.1
+* Fix encryptForm so it can be called any number of times, as before 1.3.1
 
 == 1.3.2
 
-Fix problem with select elements introduced in 1.3.1
+* Fix problem with select elements introduced in 1.3.1
 
 == 1.3.1
 

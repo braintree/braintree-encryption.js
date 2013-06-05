@@ -9,8 +9,10 @@ describe("Braintree#form", function() {
                 "<input type='text' data-encrypted-name='credit-card-cvv' value='cvv' />" +
                 "<input type='text' name='card-holder-first-name' value='bob' />" +
                 "<input name='expiration-month' value ='May'/>" +
+                "<!-- example comment -->"+
                 "<select data-encrypted-name='expiration-year'><option value='2013'>2013</option></select>" +
                 "<div id ='foo'>" +
+                "  <!-- example comment -->"+
                 "  <input data-encrypted-name ='credit-card-expiration-date' class='encrypted' value ='May'/>" +
                 "</div>" +
                 "<input type=\"submit\" id=\"click_me\" />" +
