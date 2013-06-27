@@ -1,3 +1,7 @@
+== 1.3.5
+
+* Fix issue when removing hidden form elements that no longer exist on the page
+
 == 1.3.4
 
 * Fix issue in IE 8 and below or IE 9 in quirksmode where comment nodes were incorrectly being handled

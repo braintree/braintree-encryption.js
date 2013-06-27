@@ -3,7 +3,7 @@ describe("Braintree#form", function() {
     window.jQuery = $;
   });
 
-  beforeEach(function() {
+  function setFormFixture() {
     setFixtures("<form action='' id='braintree_form'>" +
                 "<input type='text' data-encrypted-name='credit-card-number' value='cc number'/>" +
                 "<input type='text' data-encrypted-name='credit-card-cvv' value='cvv' />" +
@@ -17,9 +17,16 @@ describe("Braintree#form", function() {
                 "</div>" +
                 "<input type=\"submit\" id=\"click_me\" />" +
                 "</form>");
+
+  }
+
+  beforeEach(function() {
+    setFormFixture();
+
     this.braintree = Braintree.create('foo');
+
     spyOn(this.braintree, 'encrypt').andCallFake(
-      function(data) {
+      function (data) {
         return 'encrypted ' + data;
     });
   });
@@ -66,6 +73,12 @@ describe("Braintree#form", function() {
       expect($('input[type="hidden"][name="credit-card-cvv"]').length).toBe(1);
       expect($('input[type="hidden"][name="credit-card-expiration-date"]').length).toBe(1);
       expect($('input[type="hidden"][name="credit-card-number"]').length).toBe(1);
+    });
+
+    it("shouldn't throw DOM exceptions when attempting to remove hidden inputs that no longer exist in the document", function() {
+      this.braintree.encryptForm('braintree_form');
+      setFormFixture();
+      this.braintree.encryptForm('braintree_form');
     });
 
     it("shouldn't throw DOM exceptions when encrypting multiple times", function() {
