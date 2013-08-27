@@ -1,3 +1,7 @@
+== 1.3.6
+
+* Fix global variable creation
+
 == 1.3.5
 
 * Fix issue when removing hidden form elements that no longer exist on the page
