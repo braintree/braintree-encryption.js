@@ -1,3 +1,7 @@
+== 1.3.7
+
+* Fix removal of hidden fields in IE9.
+
 == 1.3.6
 
 * Fix global variable creation
