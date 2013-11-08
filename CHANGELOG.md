@@ -1,6 +1,10 @@
+== 1.3.8
+
+* fix removal of hidden fields in all browsers.
+
 == 1.3.7
 
-* Fix removal of hidden fields in IE9.
+* fix removal of hidden fields in ie9.
 
 == 1.3.6
 
