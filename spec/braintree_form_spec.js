@@ -9,6 +9,9 @@ describe("Braintree#form", function() {
                 "<input type='text' data-encrypted-name='credit-card-cvv' value='cvv' />" +
                 "<input type='text' name='card-holder-first-name' value='bob' />" +
                 "<input name='expiration-month' value ='May'/>" +
+                "<svg>" + 
+                "<circle cx='50' cy='50' r='40' stroke='black' fill='red' />" +
+                "</svg>" +
                 "<!-- example comment -->"+
                 "<select data-encrypted-name='expiration-year'><option value='2013'>2013</option></select>" +
                 "<div id ='foo'>" +

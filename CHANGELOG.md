@@ -1,3 +1,7 @@
+== 1.3.9
+
+* Fix issue #14 in safari where an svg element in a form would prevent submission. Thanks to @oveddan (Dan Oved) for the fix (pull request #15)
+
 == 1.3.8
 
 * fix removal of hidden fields in all browsers.
