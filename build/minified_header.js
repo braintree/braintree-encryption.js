@@ -1,7 +1,7 @@
 /*!
  * Braintree End-to-End Encryption Library
  * https://www.braintreepayments.com
- * Copyright (c) 2009-2013 Braintree Payment Solutions
+ * Copyright (c) 2009-2014 Braintree, a division of PayPal, Inc.
  *
  * JSBN
  * Copyright (c) 2005  Tom Wu

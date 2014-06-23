@@ -1,3 +1,7 @@
+== 1.3.10
+
+* Update to latest jsbn to fix global variable leak (issue #11)
+
 == 1.3.9
 
 * Fix issue #14 in safari where an svg element in a form would prevent submission. Thanks to @oveddan (Dan Oved) for the fix (pull request #15)

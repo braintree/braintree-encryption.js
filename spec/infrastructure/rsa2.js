@@ -38,7 +38,7 @@ function RSASetPrivate(N,E,D) {
     this.d = parseBigInt(D,16);
   }
   else
-    alert("Invalid RSA private key");
+    throw new Error("Invalid RSA private key");
 }
 
 // Set the private key fields N, e, d and CRT params from hex strings
@@ -54,7 +54,7 @@ function RSASetPrivateEx(N,E,D,P,Q,DP,DQ,C) {
     this.coeff = parseBigInt(C,16);
   }
   else
-    alert("Invalid RSA private key");
+    throw new Error("Invalid RSA private key");
 }
 
 // Generate a new random private key B bits long, using public expt E
@@ -116,10 +116,10 @@ function RSADecrypt(ctext) {
 
 // Return the PKCS#1 RSA decryption of "ctext".
 // "ctext" is a Base64-encoded string and the output is a plain string.
-function RSAB64Decrypt(ctext) {
-  var h = b64tohex(ctext);
-  if(h) return this.decrypt(h); else return null;
-}
+//function RSAB64Decrypt(ctext) {
+//  var h = b64tohex(ctext);
+//  if(h) return this.decrypt(h); else return null;
+//}
 
 // protected
 RSAKey.prototype.doPrivate = RSADoPrivate;
@@ -129,4 +129,4 @@ RSAKey.prototype.setPrivate = RSASetPrivate;
 RSAKey.prototype.setPrivateEx = RSASetPrivateEx;
 RSAKey.prototype.generate = RSAGenerate;
 RSAKey.prototype.decrypt = RSADecrypt;
-RSAKey.prototype.b64_decrypt = RSAB64Decrypt;
+//RSAKey.prototype.b64_decrypt = RSAB64Decrypt;
