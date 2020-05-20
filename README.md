@@ -1,3 +1,5 @@
+__⚠️ BRAINTREE-ENCRYPTION.JS IS DEPRECATED. PLEASE SEE [THE DOCS](https://developers.braintreepayments.com/start/hello-client/javascript/v3) FOR CURRENT INTEGRATION METHODS. ⚠️__
+
 # Braintree.js
 
 This library is for use with [Braintree's payment gateway](http://braintreepayments.com/) in concert with one of [the supported client libraries](http://braintreepayments.com/docs).  It encrypts sensitive payment information in a web browser using the public key of an asymmetric key pair.
